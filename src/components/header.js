@@ -1,84 +1,76 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 import Logo from '../images/trubridgelogo.png'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'white',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        padding: '1.45rem 1.0875rem',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <div style={{ margin: 0, flexGrow: 1 }}>
-        <Link
-          to="/"
-          style={{
-            color: '#637991',
-            textDecoration: 'none',
-          }}
-        >
-          <img style={{ width: 100 }} src={Logo} />
-        </Link>
-      </div>
 
-      <div style={{
-        borderRight: 'solid 1px black',
-        textTransform: 'uppercase',
-        padding: '0 10px 0 10px',
-        height: 30,
-      }}>
-        <Link
-          to="/"
-          style={{
-            color: '#637991',
-            textDecoration: 'none',
-          }}
-        >
-          About Us
-        </Link>
-      </div>
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
 
-      <div style={{
-        borderRight: 'solid 1px black',
-        textTransform: 'uppercase',
-        padding: '0 10px 0 10px',
-        height: 30,
-      }}>
-        <Link
-          to="/"
-          style={{
-            color: '#637991',
-            textDecoration: 'none',
-          }}
-        >
-          Services
-        </Link>
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">
+            <img src={Logo} style={{ height: 'auto', width: 130 }} />
+          </NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar style={{
+              display: 'block',
+              width: '90%',
+              position: 'absolute',
+              right: 0,
+              top: 25,
+              listStyle: 'none',
+            }}>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                width: '100%',
+                textTransform: 'uppercase'
+              }}>
+                <NavItem style={{
+                  padding: '5px 20px 5px 5px',
+                }}>
+                  <a href="#aboutus">About Us</a>
+                </NavItem>
+                <NavItem style={{
+                  padding: '5px 20px 5px 5px',
+                }}>
+                  <a href="#services">Services</a>
+                </NavItem>
+                <NavItem style={{
+                  padding: '5px 20px 5px 5px',
+                }}>
+                  <a href="#contact">Contact</a>
+                </NavItem>
+              </div>
+            </Nav>
+          </Collapse>
+        </Navbar>
       </div>
-
-      <div style={{
-        textTransform: 'uppercase',
-        padding: '0 10px 0 10px'
-      }}>
-        <Link
-          to="/"
-          style={{
-            color: '#637991',
-            textDecoration: 'none',
-          }}
-        >
-          Contact
-        </Link>
-      </div>
-    </div>
-  </div>
-)
-
-export default Header
+    );
+  }
+}

@@ -1,18 +1,49 @@
 import React from 'react';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { goldColor } from "../services/colors.service";
 
 const Contact = () => {
   const style = {
-    background: '#d7be6a',
-    padding: '0 10% 0 10%',
-    display: 'flex',
-    justifyContent: 'space-around',
+    padding: '30px 10% 30px 10%',
+    background: goldColor,
+    textTransform: 'uppercase',
   }
-  return (<div style={style}>
-    <div>
-      <h2>Get in Touch</h2>
-    </div>
-    <div>
-      <h2>Get in Touch</h2>
+  return (<div style={style} id='contact' className="container-fluid">
+      <div class="col-sm-6"><h2>Get in Touch</h2>
+      <Form>
+        <FormGroup>
+          <Input type="text" name="name" id="name" placeholder="NAME" />
+        </FormGroup>
+        <FormGroup>
+          <Input type="text" name="company" id="company" placeholder="COMPANY" />
+        </FormGroup>
+        <FormGroup>
+          <Input type="email" name="email" id="exampleEmail" placeholder="EMAIL" />
+        </FormGroup>
+        <FormGroup>
+          <Input type="tel" name="phone" id="phone" placeholder="PHONE" />
+        </FormGroup>
+        <Button>Submit</Button>
+      </Form>
+      </div>
+    <div className="col-sm-5 col-sm-offset-1">
+      <h3>Start-up Branding Packages Include:</h3>
+      <ul>
+        <li>Corporate Positioning</li>
+        <li>Identity Statement</li>
+        <li>Logo Design</li>
+        <li>
+          Visual Identity
+          <ul>
+            <li>Stationary</li>
+            <li>Powerpoint Template</li>
+            <li>Email Template</li>
+          </ul>
+        </li>
+        <li>Website</li>
+        <li>eBrochure</li>
+        <li>Style Guide</li>
+      </ul>
     </div>
   </div>)
 };
