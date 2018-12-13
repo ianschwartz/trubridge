@@ -1,4 +1,6 @@
 import React from 'react';
+var FA = require('react-fontawesome')
+
 const Services = () => {
   const style = {
     padding: '30px 10% 30px 10%',
@@ -15,23 +17,23 @@ const Services = () => {
   const smallStyle = {
     textTransform: 'none',
   }
-  return (<div style={style} className="container-fluid">
-    <div class="col-xs-12">
+  return (<div style={style} id='services' className="container-fluid">
+    <div className="col-xs-12">
       <h2>Services</h2>
     </div>
     <div className="col-sm-4 col-sm-offset-2">
       <ul style={ulStyle}>
         <li>
-          <h4 style={h4Style}>Corporate Identity</h4>
-          <small style={smallStyle}>Positioning and narrative</small>
+          <h4 style={h4Style}><FA name='flag'/> Corporate Identity</h4>
+          <div style={smallStyle}>Positioning and narrative</div>
         </li>
         <li>
           <h4 style={h4Style}>Corporate Branding</h4>
-          <small style={smallStyle}>Naming and logo design</small>
+          <div style={smallStyle}>Naming and logo design</div>
         </li>
         <li>
           <h4 style={h4Style}>Graphic Design</h4>
-          <small style={smallStyle}>Stationary, email and PowerPoint templates</small>
+          <div style={smallStyle}>Stationary, email and PowerPoint templates</div>
         </li>
       </ul>
     </div>
@@ -39,16 +41,16 @@ const Services = () => {
       <ul style={ulStyle}>
         <li>
           <h4 style={h4Style}>Web Development</h4>
-          <small style={smallStyle}>Website design, copywriting and programming</small>
+          <div style={smallStyle}>Website design, copywriting and programming</div>
         </li>
         <li>
           <h4 style={h4Style}>Investor Presentations</h4>
-          <small style={smallStyle}>Graphics, copywriting and presentation caching</small>
+          <div style={smallStyle}>Graphics, copywriting and presentation caching</div>
         </li>
         <li>
           <h4 style={h4Style}>Investor Communications</h4>
-          <small style={smallStyle}>Search, CRM and social media communications<br />
-          Investor Presentations</small>
+          <div style={smallStyle}>Search, CRM and social media communications<br />
+          Investor Presentations</div>
         </li>
       </ul>
     </div>

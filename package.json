@@ -19,6 +19,7 @@
     "npm": "^6.4.1",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-navbar": "^3.0.0",
     "reactstrap": "^6.5.0"

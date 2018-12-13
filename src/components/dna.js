@@ -8,7 +8,8 @@ const Dna = () => {
   };
   return (<div className='container-fluid' style={{
     backgroundImage: `url(${dna})`,
-    backgroundSize: '100%',
+    backgroundRepeat: 'none',
+    backgroundSize: 'cover',
   }}>
     <div className="col-sm-5 col-sm-offset-1">
       <h2 style={{
@@ -33,7 +34,7 @@ const Dna = () => {
         <b>Was Apple just another piece of tech? Or a company on a crusade to redefine computing?</b>
       </p>
       <p>
-        Was nike a sneaker? Or a company with a rallying cry to "Just do it"?
+        Was Nike a sneaker? Or a company with a rallying cry to "Just do it"?
       </p>
       <p>Early investors were intrigued by the product. But convinced by the company.</p>
       <p>Corporate brands have purpose. Tell a story.</p>

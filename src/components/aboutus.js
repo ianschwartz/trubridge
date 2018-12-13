@@ -6,14 +6,14 @@ const AboutUs = () => {
     padding: '30px 10% 30px 10%',
     background: '#f9f9f9',
   };
-  return (<div style={style} className="container-fluid">
+  return (<div style={style} id="aboutus" className="container-fluid">
     <div className="col-xs-12" style={{
       textAlign: 'center',
     }}>
       <h1 style={{ color: goldColor, fontSize: '4em' }}>We're Trubridge Health.</h1>
       <p style={{
         fontSize: '1.5em',
-        textAlign: 'justify',
+        textAlign: 'center',
         color: blueColor,
       }}>The branding specialists that help biotech and health startups win the hearts and minds of potential investors.</p>
     </div>

@@ -9,7 +9,7 @@ const Contact = () => {
     textTransform: 'uppercase',
   }
   return (<div style={style} id='contact' className="container-fluid">
-      <div class="col-sm-6"><h2>Get in Touch</h2>
+      <div className="col-sm-6"><h2>Get in Touch</h2>
       <Form>
         <FormGroup>
           <Input type="text" name="name" id="name" placeholder="NAME" />
@@ -23,7 +23,17 @@ const Contact = () => {
         <FormGroup>
           <Input type="tel" name="phone" id="phone" placeholder="PHONE" />
         </FormGroup>
-        <Button>Submit</Button>
+        <div style={{
+          textAlign: 'right'
+        }}>
+          <Button style={{
+            background: '#556c8b',
+            color: 'white',
+            textTransform: 'uppercase',
+            borderRadius: 0,
+            padding: '5px 20px 5px 20px',
+          }}>Submit</Button>
+        </div>
       </Form>
       </div>
     <div className="col-sm-5 col-sm-offset-1">
@@ -34,10 +44,12 @@ const Contact = () => {
         <li>Logo Design</li>
         <li>
           Visual Identity
-          <ul>
-            <li>Stationary</li>
-            <li>Powerpoint Template</li>
-            <li>Email Template</li>
+          <ul style={{
+            listStyleType: "'>'",
+          }}>
+            <li style={{ paddingLeft: 3 }}>Stationary</li>
+            <li style={{ paddingLeft: 3 }}>Powerpoint Template</li>
+            <li style={{ paddingLeft: 3 }}>Email Template</li>
           </ul>
         </li>
         <li>Website</li>
