@@ -10,7 +10,7 @@ const Contact = () => {
   }
   return (<div style={style} id='contact' className="container-fluid">
       <div className="col-sm-6"><h2>Get in Touch</h2>
-      <Form>
+      <Form action="https://formspree.io/dschwartz@trubridge.biz" method="POST">>
         <FormGroup>
           <Input type="text" name="name" id="name" placeholder="NAME" />
         </FormGroup>
@@ -18,7 +18,7 @@ const Contact = () => {
           <Input type="text" name="company" id="company" placeholder="COMPANY" />
         </FormGroup>
         <FormGroup>
-          <Input type="email" name="email" id="exampleEmail" placeholder="EMAIL" />
+          <Input type="email" name="_replyto" id="_replyto" placeholder="EMAIL" />
         </FormGroup>
         <FormGroup>
           <Input type="tel" name="phone" id="phone" placeholder="PHONE" />
