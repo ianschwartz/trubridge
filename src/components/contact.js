@@ -10,7 +10,7 @@ const Contact = () => {
   }
   return (<div style={style} id='contact' className="container-fluid">
       <div className="col-sm-6"><h2>Get in Touch</h2>
-      <Form action="https://formspree.io/dschwartz@trubridge.biz" method="POST">>
+      <Form action="https://formspree.io/dschwartz@trubridge.biz" method="POST">
         <FormGroup>
           <Input type="text" name="name" id="name" placeholder="NAME" />
         </FormGroup>

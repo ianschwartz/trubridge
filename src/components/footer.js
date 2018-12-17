@@ -21,9 +21,9 @@ const Footer = () => {
       <div className="col-sm-6">
         <h2>Trubridge Health</h2>
         <h4>Dean Schwartz</h4>
-        <div>917-222-2222</div>
-        <div>dean@trubridgehealth.com</div>
-        <div>122 Address St, NYC, 10011</div>
+        <div><a href="mailto://dean@trubridgehealth.com" style={{
+          color: 'white',
+        }}>dean@trubridgehealth.com</a></div>
       </div>
       <div style={starbucksStyle} id='starbucks-disclaimer'>
         * Starbucks logo is a registered trademark of starbucks inc.

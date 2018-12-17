@@ -30,12 +30,11 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ height: 90}}>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">
             <img src={Logo} style={{ height: 'auto', width: 130 }} />
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar style={{
               display: 'block',
