@@ -56,6 +56,9 @@ class MyCarousel extends Component {
   };
 
   render() {
+    const slideStyle = {
+      fontSize: 40,
+    };
     const slides = [
       {
         image: starbucks1,
@@ -64,7 +67,7 @@ class MyCarousel extends Component {
           width: '100%',
           padding: '0 20px 0 20px',
           borderBottom: '1px solid black',
-        }}><h2><i>Investors don't fund products.</i></h2></div>
+        }}><h2 style={slideStyle}><i>Investors don't fund products.</i></h2></div>
       },
       {
         image: starbucks2,
@@ -73,7 +76,7 @@ class MyCarousel extends Component {
           width: '100%',
           padding: '0 20px 0 20px',
           borderBottom: '1px solid black',
-        }}><h2><i>They fund companies.</i></h2></div>
+        }}><h2 style={slideStyle}><i>They fund companies.</i></h2></div>
       },
       {
         image: guys,
@@ -82,7 +85,7 @@ class MyCarousel extends Component {
           width: '100%',
           background: goldColor,
           padding: '0 20px 0 20px'
-        }}><h2><i>And the people who lead them</i></h2></div>
+        }}><h2 style={slideStyle}><i>And the people who lead them</i></h2></div>
       },
     ];
     const activeSlide = slides[this.state.activeSlide % 3];
@@ -94,19 +97,24 @@ class MyCarousel extends Component {
       backgroundPosition: 'center',
       maxWidth: '100%',
       height: 600,
-      display: 'flex',
-      position: 'relative'
+      position: 'relative',
     }
     return (<div style={style}>
       <div style={{
-        alignSelf: 'center',
-        textAlign: 'center',
-        color: 'white',
-        textTransform: 'uppercase',
-        margin: '9%',
-        padding: '20%',
-      }} className='fadeImage'>
-        {activeSlide.copy}
+        margin: '0 15% 0 15%',
+        height: 600,
+        display: 'flex',
+      }}>
+        <div style={{
+          alignSelf: 'center',
+          textAlign: 'center',
+          color: 'white',
+          textTransform: 'uppercase',
+          margin: '1px 10% 1px 4%',
+          minHeight: 30,
+        }} className='fadeImage'>
+          {activeSlide.copy}
+        </div>
       </div>
     </div>)
   }
