@@ -21,6 +21,7 @@ const Footer = () => {
       <div className="col-sm-6">
         <h2>Trubridge Health</h2>
         <h4>Dean Schwartz</h4>
+        <div><a href="tel:646-389-4423">646-389-4423</a></div>
         <div><a href="mailto://dean@trubridgehealth.com" style={{
           color: 'white',
         }}>dean@trubridgehealth.com</a></div>
