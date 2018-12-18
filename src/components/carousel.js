@@ -75,7 +75,7 @@ class MyCarousel extends Component {
           height: '100%',
           display: 'inline-block',
           padding: '0 20px 0 20px',
-          backgroundColor: goldColor,
+          borderBottom: '1px solid black',
         }}><h2 style={slideStyle}><i>They fund companies.</i></h2></div>
       },
       {
