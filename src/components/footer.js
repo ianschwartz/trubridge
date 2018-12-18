@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="col-sm-6">
         <h2>Trubridge Health</h2>
         <h4>Dean Schwartz</h4>
-        <div><a href="mailto://dean@trubridgehealth.com" style={{
+        <div><a href="mailto://dschwartz@trubridge.biz" style={{
           color: 'white',
         }}>dean@trubridgehealth.com</a></div>
       </div>

@@ -64,28 +64,28 @@ class MyCarousel extends Component {
         image: starbucks1,
         copy: <div style={{
           height: '100%',
-          width: '100%',
+          display: 'inline-block',
           padding: '0 20px 0 20px',
-          borderBottom: '1px solid black',
+          borderBottom: '1px solid black'
         }}><h2 style={slideStyle}><i>Investors don't fund products.</i></h2></div>
       },
       {
         image: starbucks2,
         copy: <div style={{
           height: '100%',
-          width: '100%',
+          display: 'inline-block',
           padding: '0 20px 0 20px',
-          borderBottom: '1px solid black',
+          backgroundColor: goldColor,
         }}><h2 style={slideStyle}><i>They fund companies.</i></h2></div>
       },
       {
         image: guys,
         copy: <div style={{
           height: '100%',
-          width: '100%',
-          background: goldColor,
-          padding: '0 20px 0 20px'
-        }}><h2 style={slideStyle}><i>And the people who lead them</i></h2></div>
+          display: 'inline-block',
+          padding: '0 20px 0 20px',
+          backgroundColor: goldColor,
+        }}><h2 style={{ fontSize: 40 }}><i>And the people who lead them</i></h2></div>
       },
     ];
     const activeSlide = slides[this.state.activeSlide % 3];
@@ -107,10 +107,9 @@ class MyCarousel extends Component {
       }}>
         <div style={{
           alignSelf: 'center',
-          textAlign: 'center',
           color: 'white',
           textTransform: 'uppercase',
-          margin: '1px 10% 1px 4%',
+          width: '100%',
           minHeight: 30,
         }} className='fadeImage'>
           {activeSlide.copy}
